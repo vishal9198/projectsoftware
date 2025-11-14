@@ -1,31 +1,43 @@
 import { motion } from 'framer-motion';
-import { Target, Users, Code2, Zap } from 'lucide-react';
+import { Code2, Clock, CheckCircle, BarChart2, Users, ShieldCheck } from 'lucide-react';
 
 const About = () => {
   const values = [
     {
-      icon: <Target className="w-8 h-8" />,
-      title: 'Our Mission',
-      description: 'Empowering developers worldwide to excel in competitive programming and technical interviews',
-      color: 'from-blue-500 to-cyan-500'
+      icon: <Code2 className="w-8 h-8" />,
+      title: 'Problem Library',
+      description: 'A curated and searchable set of algorithmic problems across difficulty levels and topics.',
+      color: 'from-green-400 to-green-600'
+    },
+    {
+      icon: <Clock className="w-8 h-8" />,
+      title: 'Timed Assessments',
+      description: 'Create or join time-boxed assessments with automatic start/end handling and team support.',
+      color: 'from-blue-400 to-cyan-500'
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Real-time Evaluation',
+      description: 'Submissions are evaluated and recorded, providing instant feedback and acceptance status.',
+      color: 'from-emerald-400 to-emerald-600'
+    },
+    {
+      icon: <BarChart2 className="w-8 h-8" />,
+      title: 'Progress & Analytics',
+      description: 'Personal dashboards show solved counts, submission history, and improvement over time.',
+      color: 'from-purple-400 to-pink-500'
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: 'Community First',
-      description: 'Building a supportive community where coders learn, compete, and grow together',
-      color: 'from-purple-500 to-pink-500'
+      title: 'Leaderboard & Community',
+      description: 'Compare performance with peers and join a community of learners and competitors.',
+      color: 'from-indigo-400 to-violet-500'
     },
     {
-      icon: <Code2 className="w-8 h-8" />,
-      title: 'Quality Content',
-      description: 'Curated problems and contests designed to challenge and improve your coding skills',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'Innovation',
-      description: 'Leveraging cutting-edge technology to provide the best coding platform experience',
-      color: 'from-orange-500 to-red-500'
+      icon: <ShieldCheck className="w-8 h-8" />,
+      title: 'Admin Tools',
+      description: 'Admin-facing tooling for creating assessments, managing problems, and reviewing submissions.',
+      color: 'from-orange-400 to-red-500'
     }
   ];
 
@@ -39,29 +51,30 @@ const About = () => {
         >
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
-              About D-Coder
+              About OAPlateform
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Your ultimate destination for mastering competitive programming and acing technical interviews
+              OAPlateform is a focused platform for practicing algorithmic problems, joining timed assessments,
+              and tracking progress — built for learners preparing for coding interviews and competitive events.
             </p>
           </div>
 
           <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 md:p-12 mb-16 border border-gray-200 dark:border-gray-700">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Our Story</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">About the Project</h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed mb-4">
-              D-Coder was founded with a simple vision: to democratize access to high-quality competitive programming resources.
-              We believe that everyone should have the opportunity to develop their coding skills and achieve their career goals.
+              OAPlateform provides a lightweight, practical environment for developers to practice problems, participate in
+              time-boxed assessments, and evaluate performance with a simple dashboard and leaderboard.
             </p>
             <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-              Today, we serve thousands of developers worldwide, from beginners taking their first steps in coding to experienced
-              programmers preparing for top tech company interviews. Our platform offers a comprehensive suite of tools, problems,
-              and contests designed to challenge and inspire.
+              The platform includes user authentication, problem submission and evaluation, contest registration, and
+              admin tools for creating assessments. It's built with modern web technologies (React + Vite on the frontend,
+              Node/Express and MongoDB on the backend) and styled with Tailwind CSS.
             </p>
           </div>
 
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">
-              What We Stand For
+              Core Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {values.map((value, index) => (
@@ -87,21 +100,22 @@ const About = () => {
           </div>
 
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white shadow-2xl">
-            <h2 className="text-4xl font-bold mb-4">Join Our Growing Community</h2>
+            <h2 className="text-4xl font-bold mb-4">Get Started</h2>
             <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              Be part of a thriving community of developers who are passionate about coding and continuous learning
+              Sign up, solve problems, and join upcoming assessments. Track your progress on the dashboard and compare
+              performance with peers on the leaderboard.
             </p>
             <div className="flex flex-wrap justify-center gap-8 text-lg">
               <div>
-                <div className="text-4xl font-bold">10K+</div>
+                <div className="text-4xl font-bold">—</div>
                 <div className="opacity-90">Active Users</div>
               </div>
               <div>
-                <div className="text-4xl font-bold">1000+</div>
+                <div className="text-4xl font-bold">—</div>
                 <div className="opacity-90">Problems</div>
               </div>
               <div>
-                <div className="text-4xl font-bold">500+</div>
+                <div className="text-4xl font-bold">—</div>
                 <div className="opacity-90">Contests</div>
               </div>
             </div>
